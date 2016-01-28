@@ -40,17 +40,13 @@ struct node * insertAtEveryKthNode(struct node *head, int K) {
 			  if (current == NULL)
 				 return head;
 		 }
-
-
 		 newNode = (struct node*) malloc(sizeof(struct node));
 		 newNode->num = value;
 		 newNode->next = current->next;
 		 current->next = newNode;
 		 len++;
-
 		 K += value+1;
 
 	}
-
 	return head;
 }
